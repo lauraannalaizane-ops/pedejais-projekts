@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Relay{% endblock %}
+{% block content %}
+<h1>Relay</h1>
+<div class="gender-list">
+    {% for Gender in Gender %}
+    <a class="gender-pick" href="#">
+        <img src="{{ url_for('static', filename='images/icons/' + Gender['picture']) }}" alt="{{ Gender['name'] }}" class="gender-picture">
+        <div class="gender-name">{{ Gender["gender"] }}</div>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

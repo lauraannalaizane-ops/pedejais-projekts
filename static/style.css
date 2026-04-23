@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #062534;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #062534;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 80px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    padding-right: 30px;
+    font-size: large;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #062534;
+    text-align: center;
+    padding: 10px;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: x-large;
+}
+
+.logo2 {
+    height: 100px;
+}
+
+.gender-list {
+    display: flex;
+    gap: 5px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gender-pick {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #EEE;
+    text-decoration: none;
+}
+.products-item:hover {
+    background-color: #DDD;
+}
+
+.gender-pick .gender-name {
+    color: black;
+    text-align: center;
+    font-size: 23px;
+}
+
+.gender-pick .gender-name:hover{
+    text-decoration: underline;
+}
+
+.gender-pic .gender-picture {
+    height: 20%
+}
+
+.gender2-show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
