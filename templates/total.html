@@ -9,5 +9,11 @@
         <div class="gender-name">{{ strunt["gender"] }}</div>
     </a>
     {% endfor %}
+
 </div>
 {% endblock %}
+{% block footer%}
+    <footer class="ipasa">
+        <p><img src="{{ url_for('static', filename='images/logo2.png') }}" alt="Logo2" class="logo2"></p>
+    </footer>
+{%endblock%}

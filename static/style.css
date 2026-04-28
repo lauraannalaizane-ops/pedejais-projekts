@@ -36,12 +36,22 @@ main {
     padding: 20px;
 }
 
-footer {
+.ipasais1 {
     width: 100%;
     background-color: #062534;
     text-align: center;
     padding: 10px;
 
+}
+
+.ipasa {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #062534;
+    text-align: center;
+    padding: 10px;
 }
 
 h1 {
