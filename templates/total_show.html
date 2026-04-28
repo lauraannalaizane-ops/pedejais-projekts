@@ -1,15 +1,18 @@
 {% extends "base.html" %}
-{% block title %}{{ product["name"] }} - Miniveikals{% endblock %}
+{% block title %}Total Score{% endblock %}
 {% block content %}
 <div class="gender2-show">
+    {%for Total_score in Total_score%}
     <div class="sadalijums">
-        <img  src="{{ url_for('static', filename='images/people/' ~ Total Score['picture']) }}" alt="{{ Total Score['name'] }}">
+        <img  src="{{ url_for('static', filename='images/people/' ~ Total_score['picture']) }}" alt="{{ Total_score['name'] }}">
     </div>
     <div class="sadalijums">
+        
+        <h2>{{ Total_score["name"] }}</h2>
+        <p>Cena: {{ Total_score["Points"] }}</p>
+        <img src="{{ url_for('static', filename='images/Flags/' ~ Total_score['flag']) }}" alt="{{ Total_score['Country'] }}">
 
-        <h2>{{ Total Score["name"] }}</h2>
-        <p>Cena: {{ Total Score["Points"] }}</p>
-        <img src="{{ url_for('static', filename='images/Flags/' ~ Total Score['picture_id']) }}" alt="{{ County['country'] }}">
     </div>
+    {%endfor%}
 </div>
 {% endblock %}

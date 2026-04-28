@@ -1,7 +1,7 @@
 {
 	"folders": {},
 	"connections": {
-		"sqlite_jdbc-19db06d01d9-64e694e318242e26": {
+		"sqlite_jdbc-19dd2880156-3dcfc7792b7bbbf4": {
 			"provider": "sqlite",
 			"driver": "sqlite_jdbc",
 			"name": "data.db",
@@ -11,10 +11,7 @@
 				"url": "jdbc:sqlite:C:\\Users\\User\\Desktop\\programesana\\12.klase\\pedeja tema\\Laizane_projekts\\data.db",
 				"configurationType": "MANUAL",
 				"type": "dev",
-				"closeIdleConnection": true,
-				"properties": {
-					"foreign_keys": "true"
-				}
+				"closeIdleConnection": true
 			}
 		}
 	},

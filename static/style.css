@@ -83,8 +83,8 @@ h1 {
     text-decoration: underline;
 }
 
-.gender-pic .gender-picture {
-    height: 20%
+.gender-pick .gender-picture {
+    height:100px;
 }
 
 .gender2-show {

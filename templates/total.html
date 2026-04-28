@@ -3,10 +3,10 @@
 {% block content %}
 <h1>Total Score</h1>
 <div class="gender-list">
-    {% for Gender in Gender %}
-    <a class="gender-pick" href="#">
-        <img src="{{ url_for('static', filename='images/icons/' + Gender['picture']) }}" alt="{{ Gender['name'] }}" class="gender-picture">
-        <div class="gender-name">{{ Gender["gender"] }}</div>
+    {% for strunt in Gender %}
+    <a class="gender-pick" href="{{ url_for('total_show', gender_id=strunt['id']) }}">
+        <img src="{{ url_for('static', filename='images/icons/' + strunt['picture']) }}" alt="{{ strunt['name'] }}" class="gender-picture">
+        <div class="gender-name">{{ strunt["gender"] }}</div>
     </a>
     {% endfor %}
 </div>
