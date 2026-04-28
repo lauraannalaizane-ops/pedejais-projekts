@@ -37,9 +37,6 @@ main {
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
     background-color: #062534;
     text-align: center;
@@ -56,39 +53,137 @@ h1 {
     height: 100px;
 }
 
-.gender-list {
+.selection-container {
     display: flex;
-    gap: 5px;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
 }
 
 .gender-pick {
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #EEE;
-    text-decoration: none;
-}
-.products-item:hover {
-    background-color: #DDD;
-}
-
-.gender-pick .gender-name {
-    color: black;
-    text-align: center;
-    font-size: 23px;
-}
-
-.gender-pick .gender-name:hover{
-    text-decoration: underline;
-}
-
-.gender-pick .gender-picture {
-    height:100px;
-}
-
-.gender2-show {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    width: 180px;
+}
+
+.gender-pick:hover {
+    background-color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: #ccc;
+}
+
+.gender-pick .gender-name {
+    color: #333;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+}
+
+.gender-pick:hover .gender-name {
+    color: #007bff;
+    text-decoration: none; 
+}
+
+.gender-pick .gender-picture {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.gender-pick:hover .gender-picture {
+    opacity: 1;
+}
+
+.gender2-show{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    padding-bottom:10px;
+}
+
+.table-head,
+.row{
+    display:grid;
+    grid-template-columns:80px 1fr 100px 120px;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.table-head{
+    background:#111;
+    color:white;
+    font-weight:bold;
+}
+
+.row{
+    border-bottom:1px solid #eee;
+}
+
+.row:hover{
+    background:#f8f8f8;
+}
+
+.photo{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.athlete{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.flag{
+    width:30px;
+}
+
+.flag2{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.rank{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.points{
+    font-weight:bold;
+}
+
+.relay-style .table-head,
+.relay-style .row {
+    grid-template-columns: 80px 1fr 120px;
+}
+
+
+.relay-style .photo {
+    border-radius: 4px; 
+    height: 40px;
+    width: 40px;
+    border: 1px solid #ddd;
+}
+
+.relay-style .points {
+    text-align: right;
+    padding-right: 20px;
 }

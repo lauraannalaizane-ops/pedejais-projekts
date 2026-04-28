@@ -2,11 +2,11 @@
 {% block title %}Relay{% endblock %}
 {% block content %}
 <h1>Relay</h1>
-<div class="gender-list">
-    {% for Gender in Gender %}
-    <a class="gender-pick" href="#">
-        <img src="{{ url_for('static', filename='images/icons/' + Gender['picture']) }}" alt="{{ Gender['name'] }}" class="gender-picture">
-        <div class="gender-name">{{ Gender["gender"] }}</div>
+<div class="selection-container">
+    {% for Relay in Gender %}
+    <a class="gender-pick" href="{{ url_for('relay_show', gender_id=Relay['id']) }}">
+        <img src="{{ url_for('static', filename='images/icons/' + Relay['picture']) }}" alt="{{ Relay['name'] }}" class="gender-picture">
+        <div class="gender-name">{{ Relay["gender"] }}</div>
     </a>
     {% endfor %}
 </div>

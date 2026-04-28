@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Relay Scores{% endblock %}
+
+{% block content %}
+
+<h1 class="page-title">
+    Relay - {{ Relay[0]['gender'] }}
+</h1>
+
+<div class="gender2-show relay-style">
+    
+    <div class="table-head">
+        <div>Rank</div>
+        <div>Country</div>
+        <div>Points</div>
+    </div>
+
+    {% for relay in Relay %}
+    <div class="row">
+
+        <div class="rank">
+            {{ loop.index }}
+        </div>
+
+        <div class="flag2">
+            <img class="photo" src="{{ url_for('static', filename='images/Flags/' ~ relay['flag']) }}" alt="{{ relay['country'] }}">
+            
+            <p class="name">{{ relay["country"] }}</p>
+        </div>
+
+        <div class="points">
+            {{ relay["Points"] }}
+        </div>
+
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}

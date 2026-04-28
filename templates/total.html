@@ -2,7 +2,7 @@
 {% block title %}Total Score{% endblock %}
 {% block content %}
 <h1>Total Score</h1>
-<div class="gender-list">
+<div class="selection-container">
     {% for strunt in Gender %}
     <a class="gender-pick" href="{{ url_for('total_show', gender_id=strunt['id']) }}">
         <img src="{{ url_for('static', filename='images/icons/' + strunt['picture']) }}" alt="{{ strunt['name'] }}" class="gender-picture">

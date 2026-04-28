@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Nations Cup{% endblock %}
+
+{% block content %}
+
+<h1 class="page-title">
+    Nations Cup - {{ Cup[0]['gender'] }}
+</h1>
+
+<div class="relay-container">
+    <div class="gender2-show relay-style">
+        
+        <div class="table-head">
+            <div>Rank</div>
+            <div>Country</div>
+            <div>Points</div>
+        </div>
+
+        {% for Nations in Cup %}
+        <div class="row">
+
+            <div class="rank">
+                {{ loop.index }}
+            </div>
+
+            <div class="flag2">
+                <img class="photo" src="{{ url_for('static', filename='images/Flags/' ~ Nations['flag']) }}" alt="{{ Nations['country'] }}">
+                <span class="name">{{ Nations["country"] }}</span>
+            </div>
+
+            <div class="points">
+                {{ Nations["Points"] }}
+            </div>
+
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}

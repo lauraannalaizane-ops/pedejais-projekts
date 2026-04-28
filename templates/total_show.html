@@ -1,18 +1,45 @@
 {% extends "base.html" %}
 {% block title %}Total Score{% endblock %}
+
 {% block content %}
+
+<h1 class="page-title">
+    Total Score - {{ Total_score[0]['gender'] }}
+</h1>
+
 <div class="gender2-show">
-    {%for Total_score in Total_score%}
-    <div class="sadalijums">
-        <img  src="{{ url_for('static', filename='images/people/' ~ Total_score['picture']) }}" alt="{{ Total_score['name'] }}">
+
+    <div class="table-head">
+        <div>Rank</div>
+        <div>Athlete</div>
+        <div>Flag</div>
+        <div>Points</div>
     </div>
-    <div class="sadalijums">
-        
-        <h2>{{ Total_score["name"] }}</h2>
-        <p>Cena: {{ Total_score["Points"] }}</p>
-        <img src="{{ url_for('static', filename='images/Flags/' ~ Total_score['flag']) }}" alt="{{ Total_score['Country'] }}">
+
+    {% for athlete in Total_score %}
+    <div class="row">
+
+        <div class="rank">
+            {{ loop.index }}
+        </div>
+
+        <div class="athlete">
+            <img class="photo" src="{{ url_for('static', filename='images/people/' ~ athlete['picture']) }}" alt="{{ athlete['name'] }}">
+
+            <p class="name">{{ athlete["name"] }}</p>
+        </div>
+
+        <div>
+            <img class="flag" src="{{ url_for('static', filename='images/Flags/' ~ athlete['flag']) }}" alt="{{ athlete['Country'] }}">
+        </div>
+
+        <div class="points">
+            {{ athlete["Points"] }}
+        </div>
 
     </div>
-    {%endfor%}
+    {% endfor %}
+
 </div>
+
 {% endblock %}
