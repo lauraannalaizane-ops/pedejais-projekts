@@ -1,10 +1,10 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: #062534;
-    margin: 0;
-    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f0f2f0;
+    color: #1a2a1f;
 }
+
+/*header, footer lapas */
 
 header {
     background-color: #062534;
@@ -62,6 +62,10 @@ h1 {
 .logo2 {
     height: 100px;
 }
+
+/*header, footer lapas beidzas */
+
+/*gender izveles lapas beidzas */
 
 .selection-container {
     display: flex;
@@ -125,6 +129,10 @@ h1 {
     overflow:hidden;
     padding-bottom:10px;
 }
+
+/*gender izveles lapas beidzas */
+
+/* Nations, Relay, Total Score standings lapas beidzas */
 
 .table-head,
 .row{
@@ -197,3 +205,52 @@ h1 {
     text-align: right;
     padding-right: 20px;
 }
+/* Nations, Relay, Total Score standings lapas beidzas */
+
+
+/* main lapa */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.main-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a4a2a;
+    margin-bottom: 1.5rem;
+}
+
+.styled-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #2a3a2a;
+}
+
+.info-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #dce4dc;
+}
+
+.styled-list {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.styled-list li {
+    margin-bottom: 0.5rem;
+    color: #2a3a2a;
+}
+
+/* main lapa beidzas */
