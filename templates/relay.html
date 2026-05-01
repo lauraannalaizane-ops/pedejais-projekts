@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Relay{% endblock %}
 {% block content %}
-<h1>Relay</h1>
+<h1 class="page-title">Relay</h1>
 <div class="selection-container">
     {% for Relay in Gender %}
     <a class="gender-pick" href="{{ url_for('relay_show', gender_id=Relay['id']) }}">

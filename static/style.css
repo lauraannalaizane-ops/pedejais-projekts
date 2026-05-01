@@ -191,7 +191,7 @@ h1 {
 .relay-style .table-head,
 .relay-style .row {
     grid-template-columns: 80px 1fr 120px;
-}
+} 
 
 
 .relay-style .photo {
@@ -202,8 +202,14 @@ h1 {
 }
 
 .relay-style .points {
-    text-align: right;
+    text-align: center;
     padding-right: 20px;
+}
+
+.page-title {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: xxx-large;
 }
 /* Nations, Relay, Total Score standings lapas beidzas */
 
@@ -224,7 +230,7 @@ h1 {
 .main-heading {
     font-size: 2.2rem;
     font-weight: 700;
-    color: #1a4a2a;
+    color: #062534;
     margin-bottom: 1.5rem;
 }
 
@@ -254,3 +260,159 @@ h1 {
 }
 
 /* main lapa beidzas */
+
+/* telefona variants */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .logo {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 5px;
+    }
+
+    nav a {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+        padding: 1rem;
+    }
+
+    /* GENDER SELECTION */
+    .selection-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gender-pick {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .page-title{
+        font-size: x-large;
+        margin-bottom: 5px;
+        padding-bottom: 10px;
+    }
+
+    /* TABLES - FIXED */
+    .gender2-show .table-head,
+    .gender2-show .row {
+        display: grid;
+        grid-template-columns: 50px 1fr 60px 70px;
+        align-items: center;
+        padding: 12px 15px;
+        gap: 8px;
+    }
+
+    .relay-style .table-head,
+    .relay-style .row {
+        grid-template-columns: 50px 1fr 70px !important;
+    }
+
+    .photo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .rank {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .athlete {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .name {
+        font-size: 13px;
+        line-height: 1.2;
+        word-break: break-word;
+    }
+
+    .flag2 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: flex-start;
+    }
+
+    .flag2 .flag {
+        width: 25px;
+    }
+
+    .points {
+        font-size: 13px;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    .table-head div:last-child {
+        text-align: right;
+    }
+
+    /* Relay specific fixes */
+    .relay-style .flag2 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: flex-start;
+    }
+
+    .relay-style .photo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .relay-style .name {
+        word-break: normal;
+        white-space: normal;
+    }
+
+    .relay-style .points {
+        text-align: right;
+        padding-right: 0;
+    }
+
+    /* TEXT */
+    .main-heading {
+        font-size: 1.6rem;
+    }
+
+    .styled-text {
+        font-size: 0.95rem;
+    }
+
+    /* FOOTER */
+    .ipasa {
+        position: relative;
+        margin-top: 20px;
+    }
+}

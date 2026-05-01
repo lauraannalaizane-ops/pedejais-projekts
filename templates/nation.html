@@ -1,16 +1,13 @@
 {% extends "base.html" %}
 {% block title %}Nations Cup{% endblock %}
 {% block content %}
-<h1>Nations Cup</h1>
+<h1 class="page-title">Nations Cup</h1>
 <div class="selection-container">
     {% for Cup in Gender %}
     <a class="gender-pick" href="{{ url_for('nation_show', gender_id=Cup['id']) }}">
         <img src="{{ url_for('static', filename='images/icons/' + Cup['picture']) }}" alt="{{ Cup['name'] }}" class="gender-picture">
         <div class="gender-name">{{ Cup["gender"] }}</div>
     </a>
-    <footer class="ipasa">
-        <p><img src="{{ url_for('static', filename='images/logo2.png') }}" alt="Logo2" class="logo2"></p>
-    </footer>
     {% endfor %}
 </div>
 {% endblock %}

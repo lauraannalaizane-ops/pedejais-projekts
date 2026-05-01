@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Total Score{% endblock %}
 {% block content %}
-<h1>Total Score</h1>
+<h1 class="page-title">Total Score</h1>
 <div class="selection-container">
     {% for strunt in Gender %}
     <a class="gender-pick" href="{{ url_for('total_show', gender_id=strunt['id']) }}">
