@@ -1,30 +1,40 @@
 {% extends "base.html" %}
 {% block title %}Log In{% endblock %}
 {% block content %}
-    <main>
-        <h1>Log In</h1>
-        {%if first == False%}
-        <h2>Wrong e-mail and/or password</h2>
-        {%endif%}
+<main>
+    <div class="login-container">
+        <div class="login-card">
 
-        <form action="/log-in" method="POST">
-            <div class="name-field"><label for="email">Email:</label> 
+            <h1>Log In</h1>
 
-            <input type="email" name="email" required></div>
+            {%if first == False%}
+            <h2>Wrong e-mail and/or password</h2>
+            {%endif%}
 
-            <div class="name-field"><label for="password">Password:</label> 
+            <form action="/log-in" method="POST">
 
-            <input type="password" name="password" required></div>
+                <div class="name-field">
+                    <label>Email:</label>
+                    <input type="email" name="email" required>
+                </div>
 
-            <button type="submit">Log In</button> 
+                <div class="name-field">
+                    <label>Password:</label>
+                    <input type="password" name="password" required>
+                </div>
 
-        </form>
+                <button type="submit">Log In</button>
 
-        <a href="/sign-up">Don't have a profile?</a>
-    </main>
+            </form>
+
+            <a href="/sign-up">Don't have a profile?</a>
+
+        </div>
+    </div>
+</main>
 {% endblock %}
 {% block footer %}
-    <footer class="ipasa">
-        <p><img src="{{ url_for('static', filename='images/logo2.png') }}" alt="Logo2" class="logo2"></p>
-    </footer>
+<footer class="ipasa">
+    <p><img src="{{ url_for('static', filename='images/logo2.png') }}" alt="Logo2" class="logo2"></p>
+</footer>
 {% endblock %}

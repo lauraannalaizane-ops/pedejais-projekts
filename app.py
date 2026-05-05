@@ -208,7 +208,7 @@ def profile():
                 )
             elif not check_password_hash(user["password"], password):
                 return render_template(
-                    "profile.html", mistake="Wrong password on confirm", user=user
+                    "profile.html", edit_error="Wrong password on confirm", user=user
                 )
             else:
                 new_hashed = generate_password_hash(new_password)
@@ -233,7 +233,6 @@ def logout():
 
 
 @app.route("/delete-profile", methods=["POST"])
-#@login_required
 def delete_profile():
     password = request.form.get("password")
 
@@ -244,8 +243,10 @@ def delete_profile():
     ).fetchone()
 
     if not check_password_hash(user["password"], password):
-        conn.close()
-        return "Wrong password", 403
+        return render_template(
+                    "profile.html", delete_error="Wrong password", user=user
+                )
+
 
     conn.execute(
         "DELETE FROM Accounts WHERE id = ?",
