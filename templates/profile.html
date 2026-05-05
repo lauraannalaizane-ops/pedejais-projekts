@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}kaut ko citu izdoma !!!!!!!!!!!!!!!{% endblock %}
+{% block title %}Profile{% endblock %}
 {% block content %}
 <h1>Edit profile</h1>
 <h2>Email: {{user["email"]}}</h2>
@@ -22,6 +22,19 @@
     <input type="password" name="password" required></div>
 
     <button type="submit">Save</button> 
+    </form>
 
-</form>
+    </div>
+    <h1>Delete Profile</h1>
+    <h2>Email: {{user["email"]}}</h2>
+    <form action="{{ url_for('delete_profile') }}" method="POST">
+    <input type="password" name="password" placeholder="Confirm password" required>
+    <button type="submit">Delete Profile</button>
+    </form>
+    <div>
 {% endblock %}
+{% block footer%}
+    <footer class="ipasa">
+        <p><img src="{{ url_for('static', filename='images/logo2.png') }}" alt="Logo2" class="logo2"></p>
+    </footer>
+{%endblock%}

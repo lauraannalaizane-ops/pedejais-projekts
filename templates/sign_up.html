@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Home page{% endblock %}
+{% block title %}Sign Up{% endblock %}
 {% block content %}
         <h1>Sign Up<h1>
                 <h2>{{mistake}}</h2>
@@ -24,7 +24,7 @@
                     <button type="submit">Sign Up</button>
 
                 </form>
-                <a href="{{url_for('home')}}">Already have a profile?</a>
+                <a href="/log-in">Already have a profile?</a>
 {% endblock %}
 {% block footer %}
     <footer class="ipasa">

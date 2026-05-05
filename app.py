@@ -232,5 +232,32 @@ def logout():
 
 
 
+@app.route("/delete-profile", methods=["POST"])
+#@login_required
+def delete_profile():
+    password = request.form.get("password")
+
+    conn = get_db_connection()
+    user = conn.execute(
+        "SELECT * FROM Accounts WHERE id = ?",
+        (session["user_id"],)
+    ).fetchone()
+
+    if not check_password_hash(user["password"], password):
+        conn.close()
+        return "Wrong password", 403
+
+    conn.execute(
+        "DELETE FROM Accounts WHERE id = ?",
+        (session["user_id"],)
+    )
+    conn.commit()
+    conn.close()
+
+    session.clear()
+    return redirect(url_for("index"))
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
