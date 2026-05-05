@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}!!!!!!!!!!!!!!!!!!!!!!{% endblock %}
+{% block content %}
+    <main>
+        <h1>Log In</h1>
+        {%if first == False%}
+        <h2>Wrong e-mail and/or password</h2>
+        {%endif%}
+
+        <form action="/log-in" method="POST">
+            <div class="name-field"><label for="email">Email:</label> 
+
+            <input type="email" name="email" required></div>
+
+            <div class="name-field"><label for="password">Password:</label> 
+
+            <input type="password" name="password" required></div>
+
+            <button type="submit">Log In</button> 
+
+        </form>
+
+        <a href="/sign-up">Don't have a profile?</a>
+    </main>
+{% endblock %}
+{% block footer %}
+    <footer class="ipasa">
+        <p><img src="{{ url_for('static', filename='images/logo2.png') }}" alt="Logo2" class="logo2"></p>
+    </footer>
+{% endblock %}

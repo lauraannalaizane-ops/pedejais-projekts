@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Home page{% endblock %}
+{% block content %}
+        <h1>Sign Up<h1>
+                <h2>{{mistake}}</h2>
+
+                <form action="/sign-up" method="POST">
+                    <div class="name-field"><label for="username">Username:</label>
+
+                        <input type="text" name="username" required>
+                    </div>
+
+                    <div class="name-field"><label for="email">E-mail:</label>
+
+                        <input type="email" name="email" required>
+                    </div>
+
+                    <div class="name-field"><label for="password">Password:</label>
+
+                        <input type="password" name="password" required>
+                    </div>
+
+
+                    <button type="submit">Sign Up</button>
+
+                </form>
+                <a href="{{url_for('home')}}">Already have a profile?</a>
+{% endblock %}
+{% block footer %}
+    <footer class="ipasa">
+        <p><img src="{{ url_for('static', filename='images/logo2.png') }}" alt="Logo2" class="logo2"></p>
+    </footer>
+{% endblock %}
