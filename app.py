@@ -203,7 +203,7 @@ def profile():
             if new_password != new_password_2:
                 return render_template(
                     "profile.html",
-                    mistake="2nd password must match the first one",
+                    edit_error="2nd password must match the first one",
                     user=user,
                 )
             elif not check_password_hash(user["password"], password):
