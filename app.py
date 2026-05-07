@@ -30,6 +30,7 @@ def total_show(gender_id):
         LEFT JOIN Country ON Total_score.Country_id = Country.id 
         LEFT JOIN Gender ON Total_score.Gender_id = Gender.id
         WHERE Total_score.Gender_id = ?
+        ORDER BY Points DESC
         """,
         (gender_id,),
     ).fetchall()
@@ -54,6 +55,7 @@ def relay_show(gender_id):
         LEFT JOIN Country ON Nations.Country_id = Country.id
         LEFT JOIN Gender ON Nations.Gender_id = Gender.id
         WHERE Nations.Gender_id = ? AND Nations.Discipline_id = 2
+        ORDER BY Points DESC
         """,
         (gender_id,),
     ).fetchall()
@@ -77,6 +79,7 @@ def nation_show(gender_id):
         LEFT JOIN Country ON Nations.Country_id = Country.id
         LEFT JOIN Gender ON Nations.Gender_id = Gender.id
         WHERE Nations.Gender_id = ? AND Nations.Discipline_id = 3
+        ORDER BY Points DESC
         """,
         (gender_id,),
     ).fetchall()
